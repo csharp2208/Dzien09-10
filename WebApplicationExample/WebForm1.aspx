@@ -19,6 +19,15 @@
             <p>Parametry request'a</p>
             <asp:Label ID="lblRequest" runat="server" Text=""></asp:Label>
         </div>
+        <div>
+            <asp:TextBox ID="tbName" runat="server" Width="420px"></asp:TextBox>
+        </div>
+        <div>
+            <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+        </div>
+        <div>
+            <asp:Button ID="btnOK" runat="server" Text="Pokaż imię" OnClick="btnOK_Click" />
+        </div>
     </form>
 </body>
 </html>

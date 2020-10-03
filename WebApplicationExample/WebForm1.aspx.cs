@@ -15,7 +15,21 @@ namespace WebApplicationExample
             {
                 lblRequest.Text += $" {key} = {Request.Headers[key]} <br>";
             }
-            
+            lblRequest.Text += $"Metoda HTTP: {Request.HttpMethod} <br>";
+
+            //IsPostBack == true, to znak ze strona ładuje się poprzez POST
+
+            lblRequest.Text += "<br> Cookies: <br/>";
+            foreach (String key in Request.Cookies.AllKeys)
+            {
+                lblRequest.Text += $" {key} = {Request.Cookies[key].Value} <br>";
+            }
+        }
+
+        protected void btnOK_Click(object sender, EventArgs e)
+        {
+            lblName.Text = tbName.Text;
+            Response.SetCookie(new HttpCookie("name", lblName.Text));
         }
     }
 }
