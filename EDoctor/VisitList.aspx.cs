@@ -65,7 +65,7 @@ namespace EDoctor
                 using (MySqlConnection conn = new MySqlConnection(cs))
                 {
                     conn.Open();
-                    String sql = $"DELETE FROM visits WHERE id={rowId}";
+                    String sql = $"DELETE FROM visits WHERE id={rowId}"; //
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
 
