@@ -1,5 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterVisit.aspx.cs" Inherits="EDoctor.RegisterVisit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js">
+
+    </script>
+
+    <script>
+        $(function() {
+            $("#<%= tbPESEL.ClientID %>").mask("99999999999");
+        });
+    </script>
+
     <h3>Nowa wizyta</h3>
 
     <table class="table">
@@ -90,7 +101,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <asp:Button ID="Button1" runat="server" Text="Dalej" />
+                <asp:Button ID="Button1" runat="server" Text="Dalej" OnClick="Button1_Click" />
             </td>
         </tr>
 
