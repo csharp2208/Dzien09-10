@@ -62,7 +62,9 @@ namespace EDoctor
                     lblResult.Text = "Zły login, hasło albo user nieaktywny";
                 } else
                 {
-                    lblResult.Text = dt.Rows[0]["login"].ToString();
+                    // ustanowienie sesji użytkownika
+                    Session["auth_user"] = dt.Rows[0]["login"].ToString();
+                    Response.Redirect("~/RegisterVisit");
                 }
             }
 
