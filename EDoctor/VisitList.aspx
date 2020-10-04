@@ -41,6 +41,10 @@
                 </ItemTemplate>
             </asp:TemplateField>
 
+            <asp:HyperLinkField HeaderText="" Text="Edycja" 
+                DataNavigateUrlFormatString="~/EditVisit?id={0}"
+                DataNavigateUrlFields="id" />
+
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
