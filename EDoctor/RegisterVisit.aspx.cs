@@ -12,7 +12,10 @@ namespace EDoctor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["auth_user"]==null)
+            {
+                Response.Redirect("~/Login");
+            }
         }
 
         protected void cbVIP_CheckedChanged(object sender, EventArgs e)
